@@ -1,56 +1,161 @@
 body,
 html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Acme', sans-serif;
-  background-position: center;
-  background: url(../background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background-color: #1a1a1a;
+	width: 100%;
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20pt;
+	color: white;
+	/*background-position: center;
+	background: url(../background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+}
+
+/*Zona Texto GENERAL*/
+
+.zonaTexto {
+	grid-area: "zonaTexto";
 }
 
 .logo {
-	margin-top: 15px;
+	grid-area: "logo";
 }
 
-h1, h2 {
+.somos > h1 {
+	line-height: 1;
+	font-weight: 700;
+}
+
+.comunicate > h3 {
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.comunicate > h3 {
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.redes {
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+}
+
+.zonaTexto > p {
+	font-weight: 500;
+	letter-spacing: 0.2em;
+	line-height: 1.1;
+}
+
+/*Zona Botones GENERAL*/
+
+.zonaBotones > a {
+	text-transform: uppercase;
 	color: white;
-	font-weight: bold;
+	font-weight: 500;
+	letter-spacing: 0.2em;
+	text-align: center;
+	justify-content: center;
+	line-height: 1.2;
 }
 
-.instagram {
-	color: #C13584;
-	border-color: #C13584;
+a:hover {
+	color: black;
+	text-decoration: none;
+	font-weight: 600;
 }
 
-.instagram:hover {
-	color: white;
-	background-color: #C13584;
-	border-color: #C13584;
-
+.botonCatalogo {
+	grid-area: "botonCatalogo";
+	background-color: #006837;
 }
 
-.btn {
-	border-radius: 2em;
-	background-color: black;
-	padding: 10px 40px;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
+.botonGuia {
+	grid-area: "botonGuia";
+	background-color: #00923d;
 }
 
-.linea {
-	border-color: white;
-	border-width: 2px;
-	max-width: 100px;
+.botonHarry {
+	grid-area: "botonHarry";
+	background-color: #22ab56;
 }
 
-.titulo {
-	margin-top: 30px;
+.botonBenja {
+	grid-area: "botonBenja";
+	background-color: #58b43c;
 }
 
-.buffer {
-	height: 1rem;
+.cuerpo {
+	display: grid;
+	grid-template-areas: 
+		"zonaTexto zonaBotones";
+}
+
+@media (min-width: 1480px) { 
+
+	/*Zona Texto*/
+
+	.zonaTexto {
+		padding-left: 80px;
+		width: 50vw;
+		height: 100vh;
+	}
+
+	.logo > img {
+		margin-top: 40px;
+		max-height: 120px;
+	}
+
+	.somos > h1 {
+		font-size: 2.2em;
+		margin-top: 30px;
+		padding-left: 100px;
+	}
+
+	.comunicate > h3 {
+		font-size: 1.4em;
+		padding-top: 17,5px;
+		padding-left: 100px;
+	}
+
+	.redes {
+		padding-left: 100px;
+		padding-top: 20px;
+		font-size: 0.65em;
+	}
+
+	.redes > a {
+		padding-right: 10px;
+	}
+
+	.zonaTexto > p {
+		font-size: 0.65em;
+		padding-left: 100px;
+		padding-top: 120px;
+	}
+
+	/*Zona Botones*/
+
+	.zonaBotones > a {
+		font-size: .58em;
+		padding-top: 25vh;
+}
+
+	.zonaBotones {
+		grid-area: "zonaBotones";
+		height: 100vh;
+		width: 50vw;
+		display: grid;
+		grid-template-areas: 
+			"botonCatalogo botonGuia"
+			"botonHarry botonBenja";
+	}
+
+	.boton {
+		height: 50vh;
+		width: 25vw;
+	}
 }
