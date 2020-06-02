@@ -94,11 +94,11 @@ a:hover {
 
 .logo > img {
 	max-width: 70vw;
+	padding: 10px;
 }
 
 .cuerpo {
 	display: grid;
-	padding: 0px 20px;
 	grid-template-areas: 
 		"zonaBotones"
 		"zonaTexto";
@@ -106,13 +106,20 @@ a:hover {
 
 .zonaBotones {
 	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 1fr;
+	grid-template-areas: 
+		"botonCatalogo botonGuia"
+		"botonHarry botonBenja";
+}
+
+.boton {
+	height: 50vw;
+	width: 50vw;
 }
 
 .zonaBotones > a {
-	padding: 10px 0px;
-	font-size: .75em;
+	padding: 0px 15px;
+	padding-top: 18vw;
+	font-size: .5em;
 }
 
 .somos > h1 {
