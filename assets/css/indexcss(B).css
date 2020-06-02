@@ -14,12 +14,14 @@ html {
 	background-size: cover;*/
 }
 
-/* Grid areas and text formatting */
-
-	/* Zona texto*/
+/*Zona Texto GENERAL*/
 
 .zonaTexto {
 	grid-area: "zonaTexto";
+}
+
+.logo {
+	grid-area: "logo";
 }
 
 .somos > h1 {
@@ -48,11 +50,7 @@ html {
 	line-height: 1.1;
 }
 
-	/* Zona Botones */
-
-.zonaBotones {
-	grid-area: "zonaBotones";
-}
+/*Zona Botones GENERAL*/
 
 .zonaBotones > a {
 	text-transform: uppercase;
@@ -90,33 +88,19 @@ a:hover {
 	background-color: #58b43c;
 }
 
-/*------  MOBILES  -------*/
 
-.logo > img {
-	max-width: 70vw;
-}
+/*--- Mobile ---*/
 
 .cuerpo {
 	display: grid;
-	padding: 0px 20px;
 	grid-template-areas: 
-		"zonaBotones"
-		"zonaTexto";
-}
-
-.zonaBotones {
-	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 1fr;
-}
-
-.zonaBotones > a {
-	padding: 10px 0px;
-	font-size: .75em;
+		"zonaTexto"
+		"zonaBotones";
 }
 
 .somos > h1 {
-	font-size: 2em;
+	font-size: 1.5em;
+	margin-top: 30px;
 }
 
 .comunicate > h3 {
@@ -124,23 +108,91 @@ a:hover {
 	padding-top: 5px;
 }
 
+.redes {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	padding-top: 20px;
+	font-size: 0.65em;
+}
 
+.redes > a {
+	padding-right: 10px;
+	max-width: 50vw;
+}
 
+.zonaTexto > p {
+	display: none;
+}
 
-
-
+/*--- 1480p ---*/
 
 @media (min-width: 1480px) { 
 
 .cuerpo {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		"zonaTexto zonaBotones";
 }
+	/*Zona Texto*/
 
-.zonaTexto {
-	grid-column: 1 / span 1;
-}
+	.zonaTexto {
+		padding-left: 80px;
+		width: 50vw;
+		height: 100vh;
+	}
 
-.zonaBotones {
-	grid-column: 2 / span 1;
+	.logo > img {
+		margin-top: 40px;
+		max-height: 120px;
+	}
+
+	.somos > h1 {
+		font-size: 2.2em;
+		margin-top: 30px;
+		padding-left: 100px;
+	}
+
+	.comunicate > h3 {
+		font-size: 1.4em;
+		padding-top: 17,5px;
+		padding-left: 100px;
+	}
+
+	.redes {
+		padding-left: 100px;
+		padding-top: 20px;
+		font-size: 0.65em;
+	}
+
+	.redes > a {
+		padding-right: 10px;
+	}
+
+	.zonaTexto > p {
+		font-size: 0.65em;
+		padding-left: 100px;
+		padding-top: 120px;
+	}
+
+	/*Zona Botones*/
+
+	.zonaBotones > a {
+		font-size: .58em;
+		padding-top: 25vh;
+	}
+
+	.zonaBotones {
+		grid-area: "zonaBotones";
+		height: 100vh;
+		width: 50vw;
+		display: grid;
+		grid-template-areas: 
+			"botonCatalogo botonGuia"
+			"botonHarry botonBenja";
+	}
+
+	.boton {
+		height: 50vh;
+		width: 25vw;
+	}
 }
