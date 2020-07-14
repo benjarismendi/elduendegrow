@@ -1,17 +1,18 @@
 body,
 html {
-	background-color: #1a1a1a;
+	/*background-color: #1a1a1a;
+	background-image: */
 	width: 100vw;
 	height: 100vh;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 20pt;
 	color: white;
-	/*background-position: center;
-	background: url(../background.jpg) no-repeat center center fixed; 
+	background-position: center;
+	background: url(../Imagenes/background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;*/
+	background-size: cover;
 }
 
 /* Grid areas and text formatting */
@@ -51,23 +52,17 @@ html {
 	grid-area: "botonInstagram";
 }
 
-.nuestras {
-	grid-area: "nuestras";
-	font-size: 1.1em;
-	letter-spacing: 0.2em;
-}
-
-.pagina {
-	grid-area: "pagina"
-	font-weight: 500;
-	letter-spacing: 0.2em;
-	line-height: 1.1;
-}
-
 	/* Botones */
 
 .botones {
 	grid-area: "botones";
+	justify-content: center;
+	width: 100vw;
+}
+
+.btn {
+	border-radius: 30px;
+	justify-content: center;
 }
 
 a.boton {
@@ -88,52 +83,43 @@ a.boton:hover {
 
 .botonCatalogo {
 	grid-area: "botonCatalogo";
-	background-color: #006837;
 }
 
 .botonGuia {
 	grid-area: "botonGuia";
-	background-color: #00923d;
 }
 
 .botonWpp {
-	grid-area: "botonHarry";
-	background-color: #22ab56;
+	grid-area: "botonWpp";
 }
 
+
 /*------  MOBILES  -------*/
+
+@media only screen and (max-width: 768px){
 
 .cuerpo {
 	width: 100vw;
 	height: 100vh;
 	display: grid;
-	grid-template-rows: 1fr 1fr;
-}
-
-.contenido {
-	height: 50vh;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.8fr 1fr 1.2fr;
+	grid-template-rows: 15vh 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 }
 
 .logo {
-	grid-column: 1 / 3;
+	grid-column: 1 / 2;
 	grid-row: 1 / 2;
 	max-width: 45vw;
 	padding: 10px 10px;
 }
 
 .redes {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 	align-items: center;
-	grid-column: 3 / 4;
+	grid-column: 2 / 3;
 	grid-row: 1 / 2;
-}
-
-.redes .nuestras {
-	display: none;
+	display: grid;
+	grid-template-areas: "botonFacebook botonInstagram";
+	justify-content:center;
 }
 
 a img {
@@ -142,123 +128,50 @@ a img {
 }
 
 .botonFacebook {
-	justify-self: end;
 	padding-right: 5px;
 }
 
 .somos {
-	grid-column: 1 / 4;
+	grid-column: 1 / 3;
 	grid-row: 2 / 3;
 }
 
 .somos > h1 {
+	padding-top: 25px;
 	font-size: 1.55em;
-	padding-left: 20vw;
+	text-align: center;
 }
 
 .comunicate {
-	grid-column: 1 / 4;
-	grid-row: 3 / 4;
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+	text-align: center;
 }
 
 .comunicate > h3 {
 	font-weight: 600;
 	font-size: .9em;
-	padding-top: 5px;
-	padding-left: 20vw;
-	padding-right: 30px;
+	padding-top: 200px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/*Botones*/
+.boton {
+	padding: 5px 0;
 }
 
 .botones {
-	height: 50vh;
-	display: grid;
-	grid-template-areas: 
-		"botonCatalogo""botonGuia"
-		"botonHarry";
-}
-
-.boton {
-	width: 100vw;
-	padding: 7vh 30px 0 30px;
-}
-
-.botones > a {
-	font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-	font-weight: 300;
-}
-
-/* A partir de 768 px (PCs)*/
-
-@media only screen and (min-width: 769px){
-
-.cuerpo {
-	width: 100vw;
-	height: 100vh;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-}
-
-.contenido {
-	width: 50vw;
-	height: 100vh;
-	display: grid;
-	grid-template-rows: repeat(4, 1fr);
-	grid-template-columns: 1fr;
-}
-
-.logo {
-	grid-row: 1 / 2;
-	max-width: 25vw;
-	padding: 10px 10px;
-}
-
-
-.somos {
-	grid-row: 2 / 3;
-}
-
-.somos > h1 {
-	font-size: 2em;
-	padding-left: 10vw;
-}
-
-.comunicate {
-	grid-column: 1 / 4;
+	grid-column: 1 / 3;
 	grid-row: 3 / 4;
+	padding: 50px 40px;
 }
 
-.comunicate > h3 {
-	font-weight: 600;
-	font-size: 1.6em;
-	padding-top: 5px;
-	padding-left: 10vw;
-	padding-right: 60px;
+.btn {
+	width: 80vw;
+	padding: 10px 0px;
+	font-size: 20px;
 }
 
-.redes {
-	display: block;
-	grid-column: 1 / 2;
-	grid-row: 4 / 5;
-	align-items: stretch;
 }
 
-.redes .nuestras {
-	display: flex;
-}
-
-.nuestras {
-	font-size: .2em;
-	letter-spacing: 0.2em;
-}
-
-a img {
-	max-height: 10vw;
-	max-width: 10vw;
-}
-
-.botonFacebook {
-	justify-self: center;
-	padding-right: 5px;
-}
-}
