@@ -1,8 +1,8 @@
 body,
 html {
 	background-color: #1a1a1a;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 20pt;
 	color: white;
@@ -96,14 +96,9 @@ a.boton:hover {
 	background-color: #00923d;
 }
 
-.botonHarry {
+.botonWpp {
 	grid-area: "botonHarry";
 	background-color: #22ab56;
-}
-
-.botonBenja {
-	grid-area: "botonBenja";
-	background-color: #58b43c;
 }
 
 /*------  MOBILES  -------*/
@@ -112,8 +107,14 @@ a.boton:hover {
 	width: 100vw;
 	height: 100vh;
 	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.contenido {
+	height: 50vh;
+	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.8fr 1fr 1.2fr 50%;
+	grid-template-rows: 0.8fr 1fr 1.2fr;
 }
 
 .logo {
@@ -152,8 +153,7 @@ a img {
 
 .somos > h1 {
 	font-size: 1.55em;
-	padding-left: 25vw;
-	padding-top: 10px;
+	padding-left: 20vw;
 }
 
 .comunicate {
@@ -162,34 +162,103 @@ a img {
 }
 
 .comunicate > h3 {
-	padding-top: -10px;
 	font-weight: 600;
-	font-size: .95em;
+	font-size: .9em;
 	padding-top: 5px;
-	padding-left: 25vw;
+	padding-left: 20vw;
+	padding-right: 30px;
 }
 
 .botones {
 	height: 50vh;
-	grid-column: 1 / 4;
-	grid-row: 4 / 5;
 	display: grid;
 	grid-template-areas: 
 		"botonCatalogo""botonGuia"
-		"botonHarry""botonBenja";
+		"botonHarry";
 }
 
 .boton {
-	height: 12.5vh;
 	width: 100vw;
+	padding: 7vh 30px 0 30px;
 }
 
-.zonaBotones > a {
-	font-size: .2em;
+.botones > a {
+	font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+	font-weight: 300;
+}
+
+/* A partir de 768 px (PCs)*/
+
+@media only screen and (min-width: 769px){
+
+.cuerpo {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.contenido {
+	width: 50vw;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: 1fr;
+}
+
+.logo {
+	grid-row: 1 / 2;
+	max-width: 25vw;
+	padding: 10px 10px;
+}
+
+
+.somos {
+	grid-row: 2 / 3;
+}
+
+.somos > h1 {
+	font-size: 2em;
+	padding-left: 10vw;
+}
+
+.comunicate {
+	grid-column: 1 / 4;
+	grid-row: 3 / 4;
+}
+
+.comunicate > h3 {
 	font-weight: 600;
+	font-size: 1.6em;
+	padding-top: 5px;
+	padding-left: 10vw;
+	padding-right: 60px;
 }
 
-.pagina {
-	display: none;
+.redes {
+	display: block;
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+	align-items: stretch;
 }
 
+.redes .nuestras {
+	display: flex;
+}
+
+.nuestras {
+	font-size: .2em;
+	letter-spacing: 0.2em;
+}
+
+a img {
+	max-height: 10vw;
+	max-width: 10vw;
+}
+
+.botonFacebook {
+	justify-self: center;
+	padding-right: 5px;
+}
+}
