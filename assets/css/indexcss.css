@@ -8,7 +8,7 @@ html {
 	font-size: 20pt;
 	color: white;
 	background-position: center;
-	background: url(../Imagenes/background.jpg) no-repeat center center fixed; 
+	background: url(../Imagenes/background.png) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -63,8 +63,17 @@ html {
 .btn {
 	border-radius: 30px;
 	justify-content: center;
+	border-color: #8cc63f;
+	border-width: 1.5px;
+	color: #8cc63f;
+	font-size: .2em;
 }
 
+.btn:visited {
+	background-color: #8cc63f;
+}
+
+/*
 a.boton {
 	text-transform: uppercase;
 	color: white;
@@ -79,7 +88,7 @@ a.boton:hover {
 	color: black;
 	text-decoration: none;
 	font-weight: 600;
-}
+}*/
 
 .botonCatalogo {
 	grid-area: "botonCatalogo";
@@ -102,7 +111,7 @@ a.boton:hover {
 	width: 100vw;
 	height: 100vh;
 	display: grid;
-	grid-template-rows: 15vh 1fr 1fr;
+	grid-template-rows: 15vh .6fr 1fr;
 	grid-template-columns: 1fr 1fr;
 }
 
@@ -137,6 +146,7 @@ a img {
 }
 
 .somos > h1 {
+	margin-top: 50px;
 	padding-top: 25px;
 	font-size: 1.55em;
 	text-align: center;
@@ -154,6 +164,7 @@ a img {
 	padding-top: 200px;
 	padding-left: 50px;
 	padding-right: 50px;
+	margin-top: 15px;
 }
 
 /*Botones*/
@@ -169,8 +180,13 @@ a img {
 
 .btn {
 	width: 80vw;
-	padding: 10px 0px;
-	font-size: 20px;
+	padding: 15px 0px;
+	font-size: 15px;
+}
+
+.botonWpp {
+	background-color: #8cc63f;
+	color: black;
 }
 
 }
