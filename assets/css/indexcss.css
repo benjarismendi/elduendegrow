@@ -69,8 +69,10 @@ html {
 	font-size: .2em;
 }
 
-.btn:visited {
+.btn:hover {
 	background-color: #8cc63f;
+	color: black;
+	border-color: #8cc63f;
 }
 
 /*
@@ -105,7 +107,7 @@ a.boton:hover {
 
 /*------  MOBILES  -------*/
 
-@media only screen and (max-width: 768px){
+
 
 .cuerpo {
 	width: 100vw;
@@ -189,5 +191,32 @@ a img {
 	color: black;
 }
 
+@media only screen and (min-width: 769px){
+
+.botones {
+	align-items: center;
+	padding-left: 25vw;
 }
 
+.btn {
+	max-width: 50vw;
+}
+
+.logo {
+	max-width: 225px;
+}
+
+}
+
+@media only screen and (min-width: 1200px){
+
+.botones {
+	align-items: center;
+	padding-left: 35vw;
+}
+
+.btn {
+	max-width: 30vw;
+}
+
+}
